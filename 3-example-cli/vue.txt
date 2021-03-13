@@ -1,0 +1,42 @@
+props down vue pass data from parent to child
+
+event up truyeen thông điệp thông báo cho component 
+cha biết nó muốn thay đổi dữ liêu -> Nhiêm vụ của cha nhận
+thông điệp và tiến hành thay đổi
+-> khong thay doi du lieu ở component con
+
+Quy tắc: thằng nào có data chỉ có thằng đó thay đổi đươc
+
+Slot in vue ----------------- giong "children" in react
+
+lifecycle vue
+
+call api -> created
+
+call jquery  -> mounted -> render dom
+
+destroy thư viên bên thứ ba
+
+v-model giống state và setState in react
+
+directive định nghĩa 1 attr  cùng các function hook
+
+filter local and global
+
+component mixin luon chay truoc
+mixn chia sẻ tất cả dữ liệu
+còn những thằng sử dung mixin sẽ không chia sẻ dữ liệu
+cho những thằng cùng sử dụng mixin
+
+
+vuex
+
+view dispatch to actions -> commit to mutations ( reducers) 
+-> mutate state (store) -> view
+
+mutations la sync vì nó thuận tiện cho việc check sự thay đổi của state
+sử dụng action để tạo async code tới mutation (giống với reducer)
+sử dụng mapMutation thay cho việc $store.commit
+
+ 
+

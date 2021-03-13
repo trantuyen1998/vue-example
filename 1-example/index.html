@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <style>
+        .box{
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+            position: relative;
+
+        }
+        .box-2{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <div id="app">
+        <h3 class="title">
+            <!-- v-bind to binding to url, url -> variable -->
+            <a v-bind:href="url" v-bind:target="target">{{title}}</a>
+            
+        </h3>
+        <h4>price {{formatPrice()}}</h4>
+            <h4>status {{check ? "yes" : "no"}}</h4>
+        <h3>counter: {{counter}}</h3>
+        <button v-on:click="handleClick($event,5)">counter</button>
+        <div class="box" v-on:mousemove="handleMouseMove">
+             <div class="box-2" v-on:mousemove.stop="handleMouseMoveChild"></div>
+        </div>
+        <form action="" v-on:submit.prevent="handleSubmitForm">
+            <label>Nhap firstName</label>
+            <input type="text" name="firstName"><br>
+            <label>Nhap email</label>
+            <input type="email" name="email"><br>
+            
+            <input type="submit" value="Dang nhap">
+
+        </form>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>

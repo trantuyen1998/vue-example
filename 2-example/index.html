@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .tabs li{
+            cursor: pointer;
+            display: inline-block;
+            padding: 10px 15px;
+            border: 1px solid #000;
+        }
+      
+
+    </style>
+</head>
+
+
+<body>
+    <div id="app">
+        <h2>{{message}}</h2>
+        <!-- <h2>{{reversedMessage()}}</h2> method run, it will all method-->
+        <!-- computed will change if have change => only component change - change-->
+        <h2>{{reversedMessage}}</h2>
+
+        <!-- two way binding use v-model the same state react -->
+        <h1>First name = {{firstName}}</h1>
+        <!-- <input v-on:keyup="handleKeyUp" type="text" placeholder="Nhap firstname"> -->
+        <input v-model="firstName" type="text" placeholder="Nhap firstname">
+
+        <!-- bindding class -->
+        <div class="demo" v-bind:class="objClass"></div>
+
+        <ul class="tabs">
+            <li>Dang nhap</li>
+            <li>Dang ki</li>
+        </ul>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
